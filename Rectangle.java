@@ -1,44 +1,22 @@
-public abstract class Rectangle extends Shape{
-    private double width = 1.0;
-    private double length = 1.0;
-    public Rectangle(){}
+public class Rectangle {
+    private double Width;
+    private double Length;
     public Rectangle(double width, double length){
-        this.width = width;
-        this.length = length;
+        this.Length = length;
+        this.Width = width;
     }
-    public Rectangle(double width, double length, String color, Boolean filled){
-        super(color, filled);
-        this.length =length;
-        this.width = width;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
-    public double getArea(){
-      return width * length;
-    }
-    public double getPrimeter(){
-        return 2 * (width + length);
-    }
-
     @Override
     public String toString() {
         return "Rectangle{" +
-                "width=" + width +
-                ", length=" + length +
-                "} " + super.toString();
+                "Width=" + Width +
+                ", Length=" + Length +
+                '}';
     }
+    public double getArea(){
+        return Width * Length;
+    }
+    public double getPremeter(){
+        return 2 * (Width + Length);
+    }
+
 }
